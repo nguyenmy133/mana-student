@@ -78,5 +78,26 @@ public class UserResource {
         return userService.getUserProfile(username);
     }
 
+    @PutMapping("/profile")
+    public ResponseDTO<UserDTO> updateUserProfile(@RequestBody UserDTO userDTO) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String username = authentication.getName();
+
+        return userService.updateProfile(username, userDTO);
+    }
+
+    @PutMapping("/change-password")
+    public ResponseDTO<String> changePassword(@RequestBody Map<String, String> request) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String username = authentication.getName();
+
+        String oldPassword = request.get("oldPassword");
+        String newPassword = request.get("newPassword");
+        String reNewPassword = request.get("reNewPassword");
+
+        return userService.changePassword(username, oldPassword, newPassword, reNewPassword);
+    }
+
+
 
 }

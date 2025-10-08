@@ -83,6 +83,46 @@ public class UserService extends BaseService {
         response.setData(UserDTO.toDTO(user));
         return response;
     }
+    @Transactional
+    public ResponseDTO<UserDTO> updateProfile(String username, UserDTO userDTO) {
+        UserEntity user = userRepository.findByUserName(username)
+                .orElseThrow(() -> new RuntimeException("Không tìm thấy người dùng"));
+
+
+        user.setEmail(userDTO.getEmail());
+        user.setUniversity(userDTO.getUniversity());
+        user.setMajor(userDTO.getMajor());
+        user.setYearOfStudy(userDTO.getYearOfStudy());
+
+        UserEntity updatedUser = userRepository.save(user);
+
+        ResponseDTO<UserDTO> response = new ResponseDTO<>();
+        response.setStatus("200");
+        response.setData(UserDTO.toDTO(updatedUser));
+        return response;
+    }
+
+    @Transactional
+    public ResponseDTO<String> changePassword(String username, String oldPassword, String newPassword, String reNewPassword) {
+        UserEntity user = userRepository.findByUserName(username)
+                .orElseThrow(() -> new RuntimeException("Không tìm thấy người dùng"));
+
+        if (!user.getPassword().equals(oldPassword)) {
+            throw new RuntimeException("Mật khẩu cũ không đúng");
+        }
+        if (!newPassword.equals(reNewPassword)) {
+            throw new RuntimeException("Xác nhận mật khẩu mới không khớp");
+        }
+
+        user.setPassword(newPassword);
+        userRepository.save(user);
+
+        ResponseDTO<String> response = new ResponseDTO<>();
+        response.setStatus("200");
+        response.setData("Đổi mật khẩu thành công");
+        return response;
+    }
+
 
 }
 
