@@ -18,7 +18,7 @@ Mục tiêu của StudentLife là giúp sinh viên sống khoa học, học hi�
 - Đặt thời hạn, mức độ ưu tiên và gắn nhãn (tags).  
 
 ### 💰 **Quản lý tài chính sinh viên**
-- Ghi chép chi tiêu và thu nhập hàng ngày.  
+- Ghi chép chi tiêu hàng ngày.  
 - Phân loại chi tiêu theo danh mục (ăn uống, học tập, sinh hoạt, v.v).  
 
 
