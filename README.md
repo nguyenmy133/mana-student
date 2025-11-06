@@ -1,7 +1,7 @@
-# 🎓 StudentLife — Nền tảng quản lý học tập & tài chính sinh viên tích hợp AI Alloma
+# 🎓 StudentLife — Nền tảng quản lý học tập & tài chính sinh viên tích hợp AI Ollama
 
 **StudentLife** là website hỗ trợ sinh viên quản lý toàn diện **môn học, công việc cá nhân và tài chính**,  
-đồng thời tích hợp **AI Chatbot (Alloma)** giúp giải đáp thông minh về **học tập** và **chi tiêu tài chính**.  
+đồng thời tích hợp **AI Chatbot (Ollama)** giúp giải đáp thông minh về **học tập** và **chi tiêu tài chính**.  
 Mục tiêu của StudentLife là giúp sinh viên sống khoa học, học hiệu quả và chi tiêu thông minh hơn.
 
 ---
@@ -22,7 +22,7 @@ Mục tiêu của StudentLife là giúp sinh viên sống khoa học, học hi�
 - Phân loại chi tiêu theo danh mục (ăn uống, học tập, sinh hoạt, v.v).  
 
 
-### 🤖 **AI Chatbot (Alloma Integration)**
+### 🤖 **AI Chatbot (Ollama Integration)**
 - Trả lời câu hỏi học thuật (ví dụ: giải thích khái niệm, công thức, hướng dẫn làm bài).  
 - Gợi ý kế hoạch học tập, phương pháp ôn thi.  
 - Tư vấn chi tiêu thông minh, đề xuất giới hạn ngân sách.  
@@ -37,6 +37,6 @@ Mục tiêu của StudentLife là giúp sinh viên sống khoa học, học hi�
 | **Frontend** | React + TypeScript |
 | **Backend** | Java Spring Boot (RESTful API) |
 | **Cơ sở dữ liệu** | Supabase (PostgreSQL + Auth + Storage) |
-| **AI Chatbot** | Alloma API Integration |
+| **AI Chatbot** | Ollama API Integration |
 | **Bảo mật & xác thực** | JWT + Supabase Auth |
 
